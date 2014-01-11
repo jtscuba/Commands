@@ -15,10 +15,11 @@ import edu.wpi.first.wpilibj.templates.IterativeBase;
  * @author Brendan
  */
 public class Robot {
+	Chassis c;
     void Robot(Chassis c) {
-        //do nothing
+        this.c = c;
     }
-    public static void drive(Joystick j, int mode) { // 0 = arcade, 1 = tank
+    public void drive(Joystick j, int mode) { // 0 = arcade, 1 = tank
         
 // pull axes TODO: make sure it works		
 		double xAxis = j.getRawAxis(IterativeBase.X_AXIS_CHANNEL);
