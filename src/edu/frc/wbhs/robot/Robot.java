@@ -8,7 +8,7 @@ package edu.frc.wbhs.robot;
 
 import edu.frc.wbhs.robot.parts.chassis.Chassis;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.templates.IterativeBase;
+import edu.wpi.first.wpilibj.templates.RobotTemplate;
 
 /**
  *
@@ -22,9 +22,9 @@ public class Robot {
     public void drive(Joystick j, int mode) { // 0 = arcade, 1 = tank
         
 // pull axes TODO: make sure it works		
-		double xAxis = j.getRawAxis(IterativeBase.X_AXIS_CHANNEL);
-		double yAxis = j.getRawAxis(IterativeBase.Y_AXIS_CHANNEL);
-		double zAxis = j.getRawAxis(IterativeBase.Z_AXIS_CHANNEL);
+		double xAxis = j.getRawAxis(RobotTemplate.X_AXIS_CHANNEL);
+		double yAxis = j.getRawAxis(RobotTemplate.Y_AXIS_CHANNEL);
+		double zAxis = j.getRawAxis(RobotTemplate.Z_AXIS_CHANNEL);
 		
 		if (mode == 0){ // arcade mode is selected
 			double requestedLinearSpeed = xAxis;
