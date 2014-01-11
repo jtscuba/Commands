@@ -22,7 +22,7 @@ public class DriveSide {
     }
     
     public void setSpeed(double speed) {
-	drivewheel.getMotor().setSpeed(speed);
+		drivewheel.getMotor().setSpeed(speed);
     }
     
 }

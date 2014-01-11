@@ -16,8 +16,8 @@ import edu.wpi.first.wpilibj.templates.IterativeBase;
  */
 public class Robot {
 	Chassis c;
-    void Robot(Chassis c) {
-        this.c = c;
+    public Robot(Chassis chassis) {
+        this.c = chassis;
     }
     public void drive(Joystick j, int mode) { // 0 = arcade, 1 = tank
         
@@ -29,8 +29,8 @@ public class Robot {
 		if (mode == 0){ // arcade mode is selected
 			double requestedLinearSpeed = xAxis;
 			double requestedAngularSpeed = yAxis;
-			double rightSidePower = requestedLinearSpeed + requestedAngularSpeed;
-			double leftSidePower = requestedLinearSpeed - requestedAngularSpeed;
+			double rightSidePower = (requestedLinearSpeed + requestedAngularSpeed); //this might turn the wrong way
+			double leftSidePower = (requestedLinearSpeed - requestedAngularSpeed);
 			//put the gyroscope code here
 			
 			c.drive(leftSidePower, rightSidePower);

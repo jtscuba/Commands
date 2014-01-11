@@ -28,7 +28,7 @@ public class Wheel {
     }
     
     public double getSpeed() {
-        return motor.getPower() * DIAMETER;
+        return motor.getPower() * DIAMETER; //we have to measure the speed at full power to make this useful
     }
     
 }

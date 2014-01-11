@@ -7,32 +7,28 @@
 
 package edu.wpi.first.wpilibj.templates;
 import edu.frc.wbhs.robot.Robot;
-import edu.wpi.first.wpilibj.*;
+import edu.frc.wbhs.robot.parts.chassis.Chassis;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the IterativeRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
- */
+
 public class IterativeBase extends IterativeRobot {
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
-    public int JOYSTICK = 1;
-    public static int X_AXIS_CHANNEL = 0;
-	public static int Y_AXIS_CHANNEL = 1;
-	public static int Z_AXIS_CHANNEL = 2;
-    public Robot robot = new Robot();
+
+    public int JOYSTICK = 1; // which joystick we are using, usually 1
+    public static int X_AXIS_CHANNEL = 0; // which channel the x axis is on the joystick
+	public static int Y_AXIS_CHANNEL = 1; // which channel the y axis is on the joystick
+	public static int Z_AXIS_CHANNEL = 2; // which channel the z axis is on the joystick
+	public static int[] RIGHT_SIDE_PINS = {2}; //which pins the right side of the drive motors are
+	public static int[] LEFT_SIDE_PINS = {3}; 
+    public Robot robot;
+	public Chassis chassis;
     public Joystick joystick = new Joystick(JOYSTICK);
     
     
     public void robotInit() {
-        
+		
+		chassis = new Chassis(RIGHT_SIDE_PINS, LEFT_SIDE_PINS); //set up the chassis
+        robot = new Robot(chassis); //feed it to the robot
     }
 
     /**
@@ -46,7 +42,7 @@ public class IterativeBase extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        Robot.drive(joystick, 0); //0 = arcade, 1 = tank
+        robot.drive(joystick, 0); // 0 = arcade, 1 = tank
     }
     
     /**
