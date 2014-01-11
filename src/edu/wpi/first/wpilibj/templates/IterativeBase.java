@@ -46,7 +46,7 @@ public class IterativeBase extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        Robot.drive(joystick, 0); //0 = arcade, 1 = tank
+        robot.drive(joystick, 0); //0 = arcade, 1 = tank
     }
     
     /**
