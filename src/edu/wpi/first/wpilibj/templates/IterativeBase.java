@@ -23,7 +23,7 @@ public class IterativeBase extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-
+        public Robot robot = new Robot();
     }
 
     /**
