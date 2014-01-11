@@ -18,7 +18,7 @@ public class IterativeBase extends IterativeRobot {
     public static int X_AXIS_CHANNEL = 1; // which channel the x axis is on the joystick
 	public static int Y_AXIS_CHANNEL = 2; // which channel the y axis is on the joystick
 	public static int Z_AXIS_CHANNEL = 3; // which channel the z axis is on the joystick
-	public static int[] RIGHT_SIDE_PINS = {2}; //which pins the right side of the drive motors are
+	public static int[] RIGHT_SIDE_PINS = {2}; //which digital output the right side of the drive motors are
 	public static int[] LEFT_SIDE_PINS = {3}; 
     public Robot robot;
 	public Chassis chassis;
