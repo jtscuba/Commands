@@ -8,6 +8,7 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.frc.wbhs.robot.Robot;
 import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 /**
@@ -22,7 +23,14 @@ public class IterativeBase extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+    public int JOYSTICK = 1;
+    static int X_AXIS_CHANNEL = 0;
+	public int Y_AXIS_CHANNEL = 1;
+	public int Z_AXIS_CHANNEL = 2;
     public Robot robot = new Robot();
+    public Joystick joystick = new Joystick(JOYSTICK);
+    
+    
     public void robotInit() {
         
     }
@@ -38,7 +46,7 @@ public class IterativeBase extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        
+        Robot.drive(joystick, 0); //0 = arcade, 1 = tank
     }
     
     /**
