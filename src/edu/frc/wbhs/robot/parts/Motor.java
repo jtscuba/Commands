@@ -6,23 +6,31 @@
 
 package edu.frc.wbhs.robot.parts;
 
+import edu.wpi.first.wpilibj.Victor;
+
 /**
  *
- * @author Brendan
+ * @author Brendan, Brian
  */
 public class Motor {
     
     // From -1.0 to 1.0
     private double power;
     private double rotation;
+    private Victor actualmotor;
     
-    public Motor() {
+    public Motor(int pinID) {
         power = 0;
         rotation = 0;
+	actualmotor = new Victor(pinID);
     }
     
     public double getPower() {
         return power;
+    }
+    
+    public void setSpeed(double power) {
+	this.power = power;
     }
     
     // public double currentRotation()

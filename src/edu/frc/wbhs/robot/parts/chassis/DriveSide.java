@@ -18,8 +18,8 @@ public class DriveSide {
     private Wheel drivewheel;
     private Motor motor;
     
-    public DriveSide() {
-	motor = new Motor();
+    public DriveSide(int[] pinIDs) {
+	motor = new Motor(pinIDs[0]);
         drivewheel = new Wheel(motor);
     }
     
