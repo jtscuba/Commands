@@ -24,9 +24,9 @@ public class IterativeBase extends IterativeRobot {
      * used for any initialization code.
      */
     public int JOYSTICK = 1;
-    static int X_AXIS_CHANNEL = 0;
-	public int Y_AXIS_CHANNEL = 1;
-	public int Z_AXIS_CHANNEL = 2;
+    public static int X_AXIS_CHANNEL = 0;
+	public static int Y_AXIS_CHANNEL = 1;
+	public static int Z_AXIS_CHANNEL = 2;
     public Robot robot = new Robot();
     public Joystick joystick = new Joystick(JOYSTICK);
     
