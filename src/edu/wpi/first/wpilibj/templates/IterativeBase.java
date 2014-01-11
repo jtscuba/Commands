@@ -15,20 +15,21 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 public class IterativeBase extends IterativeRobot {
 
     public int JOYSTICK = 1; // which joystick we are using, usually 1
-    public static int X_AXIS_CHANNEL = 0; // which channel the x axis is on the joystick
-	public static int Y_AXIS_CHANNEL = 1; // which channel the y axis is on the joystick
-	public static int Z_AXIS_CHANNEL = 2; // which channel the z axis is on the joystick
+    public static int X_AXIS_CHANNEL = 1; // which channel the x axis is on the joystick
+	public static int Y_AXIS_CHANNEL = 2; // which channel the y axis is on the joystick
+	public static int Z_AXIS_CHANNEL = 3; // which channel the z axis is on the joystick
 	public static int[] RIGHT_SIDE_PINS = {2}; //which pins the right side of the drive motors are
 	public static int[] LEFT_SIDE_PINS = {3}; 
     public Robot robot;
 	public Chassis chassis;
-    public Joystick joystick = new Joystick(JOYSTICK);
+    public Joystick joystick; 
     
     
     public void robotInit() {
 		
 		chassis = new Chassis(RIGHT_SIDE_PINS, LEFT_SIDE_PINS); //set up the chassis
         robot = new Robot(chassis); //feed it to the robot
+		joystick = new Joystick(JOYSTICK);
     }
 
     /**
@@ -43,7 +44,6 @@ public class IterativeBase extends IterativeRobot {
      */
     public void teleopPeriodic() {
         robot.drive(joystick, 0); // 0 = arcade, 1 = tank
-        robot.drive(joystick, 0); //0 = arcade, 1 = tank
     }
     
     /**
