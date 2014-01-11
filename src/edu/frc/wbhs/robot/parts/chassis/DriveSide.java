@@ -15,12 +15,11 @@ import edu.frc.wbhs.robot.parts.Wheel;
  */
 public class DriveSide {
     
-    private Wheel drivewheel;
+    public Wheel drivewheel;
     private Motor motor;
     
     public DriveSide(int[] pinIDs) {
-	motor = new Motor(pinIDs[0]);
-        drivewheel = new Wheel(motor);
+        drivewheel = new Wheel(new Motor(pinIDs[0]));
     }
     
     public void setSpeed(double speed) {

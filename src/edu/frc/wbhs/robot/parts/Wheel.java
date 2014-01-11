@@ -14,7 +14,7 @@ public class Wheel {
     
     public static final double DIAMETER = 4.0; // Inches
     
-    private Motor motor;
+    public Motor motor;
     
     public Wheel(Motor m) {
         this.motor = m;
@@ -27,7 +27,5 @@ public class Wheel {
     public double getSpeed() {
         return motor.getPower() * DIAMETER;
     }
-    
-    // public boolean spin()
     
 }

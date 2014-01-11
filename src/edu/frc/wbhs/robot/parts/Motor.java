@@ -16,7 +16,7 @@ public class Motor {
     
     // From -1.0 to 1.0
     private double power;
-    private double rotation;
+    private double rotation; // Don't know if needed
     private Victor actualmotor;
     
     public Motor(int pinID) {

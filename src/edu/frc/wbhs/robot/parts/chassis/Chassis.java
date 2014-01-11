@@ -18,9 +18,9 @@ public class Chassis {
     private DriveSide rightdrive;
     
     
-    public Chassis(/*Do we need anything here?*/) {
-        leftdrive = new DriveSide(null);
-        rightdrive = new DriveSide(null);
+    public Chassis(int[] leftdrivePinIDs, int[] rightdrivePinIDs) {
+        leftdrive = new DriveSide(leftdrivePinIDs);
+        rightdrive = new DriveSide(rightdrivePinIDs);
         
         /*
         To Polar:
