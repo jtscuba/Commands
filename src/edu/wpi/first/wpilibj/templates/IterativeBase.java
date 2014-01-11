@@ -22,10 +22,11 @@ public class IterativeBase extends IterativeRobot {
 	public static int[] LEFT_SIDE_PINS = {3}; 
     public Robot robot;
 	public Chassis chassis;
-    public Joystick joystick; 
+    public Joystick joystick;
     
     
-    public void robotInit() {
+    public void robotInit() 
+	{
 		
 		chassis = new Chassis(RIGHT_SIDE_PINS, LEFT_SIDE_PINS); //set up the chassis
         robot = new Robot(chassis); //feed it to the robot
@@ -35,21 +36,24 @@ public class IterativeBase extends IterativeRobot {
     /**
      * This function is called periodically during autonomous
      */
-    public void autonomousPeriodic() {
+    public void autonomousPeriodic() 
+	{
 
     }
 
     /**
      * This function is called periodically during operator control
      */
-    public void teleopPeriodic() {
+    public void teleopPeriodic() 
+	{
         robot.drive(joystick, 0); // 0 = arcade, 1 = tank
     }
     
     /**
      * This function is called periodically during test mode
      */
-    public void testPeriodic() {
+    public void testPeriodic() 
+	{
     
     }
     
