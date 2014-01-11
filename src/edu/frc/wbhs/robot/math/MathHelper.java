@@ -19,7 +19,7 @@ public class MathHelper {
     }
     
     public static Vector toPolar(double x, double y) {
-	return new Vector(Math.atan2(y, x), Math.hypot(x, y));
+	return null;//new Vector(Math.atan2(y, x), Math.hypot(x, y));
     }
     
 }
