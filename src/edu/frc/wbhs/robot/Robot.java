@@ -30,6 +30,9 @@ public class Robot {
 			double requestedAngularSpeed = yAxis;
 			double rightSidePower = requestedLinearSpeed + requestedAngularSpeed;
 			double leftSidePower = requestedLinearSpeed - requestedAngularSpeed;
+			//put the gyroscope code here
+			
+			c.drive(leftSidePower, rightSidePower);
 			
 		}
 		

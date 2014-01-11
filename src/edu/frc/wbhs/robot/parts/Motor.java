@@ -27,5 +27,4 @@ public class Motor {
 	actualmotor.set(power);
     }
 
-    // public double currentRotation()
 }
