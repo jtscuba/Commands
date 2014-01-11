@@ -8,6 +8,9 @@ import edu.wpi.first.wpilibj.templates.RobotTemplate;
  *
  * @author Brendan
  */
+/* TODO: add all the other parts that we need and set the joystick up for them
+ make sure we're only sending the requested power down through a method
+ so we can change it without messing with this class */
 public class Robot {
 
 	Chassis c;
@@ -17,6 +20,10 @@ public class Robot {
 	}
 
 	public void drive(Joystick j, int mode) { // mode: 0 = arcade, 1 = tank
+
+		/* TODO: put this code into the chassis drive method, there's too many
+		 continuous lines of code for this high up the object tree */
+		
 		// pull axes from the joystick	
 		double xAxis = j.getRawAxis(RobotTemplate.X_AXIS_CHANNEL);
 		double yAxis = j.getRawAxis(RobotTemplate.Y_AXIS_CHANNEL);
