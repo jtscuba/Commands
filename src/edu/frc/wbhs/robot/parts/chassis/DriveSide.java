@@ -7,19 +7,24 @@
 package edu.frc.wbhs.robot.parts.chassis;
 
 import edu.frc.wbhs.robot.parts.Motor;
+import edu.frc.wbhs.robot.parts.Wheel;
 
 /**
  *
- * @author Brendan
+ * @author Brendan, Brian
  */
 public class DriveSide {
     
-    private Motor drive;
+    private Wheel drivewheel;
+    private Motor motor;
     
     public DriveSide() {
-        drive = new Motor();
+	motor = new Motor();
+        drivewheel = new Wheel(motor);
     }
     
-    
+    public void setSpeed(double speed) {
+	drivewheel.getMotor().setSpeed(speed);
+    }
     
 }
