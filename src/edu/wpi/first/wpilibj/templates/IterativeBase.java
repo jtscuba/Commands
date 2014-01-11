@@ -6,8 +6,8 @@
 /*----------------------------------------------------------------------------*/
 
 package edu.wpi.first.wpilibj.templates;
+import edu.frc.wbhs.robot.Robot;
 import edu.wpi.first.wpilibj.*;
-
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 /**
@@ -22,8 +22,9 @@ public class IterativeBase extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+    public Robot robot = new Robot();
     public void robotInit() {
-        public Robot robot = new Robot();
+        
     }
 
     /**
