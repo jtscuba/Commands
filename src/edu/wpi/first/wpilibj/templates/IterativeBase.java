@@ -11,7 +11,6 @@ import edu.frc.wbhs.robot.parts.chassis.Chassis;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
-
 public class IterativeBase extends IterativeRobot {
 
     public int JOYSTICK = 1; // which joystick we are using, usually 1
