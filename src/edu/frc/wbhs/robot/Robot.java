@@ -11,5 +11,7 @@ package edu.frc.wbhs.robot;
  * @author Brendan
  */
 public class Robot {
-    void Robot(int wheels, )
+    void Robot() {
+        //do nothing
+    }
 }
