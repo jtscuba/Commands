@@ -16,7 +16,6 @@ import edu.frc.wbhs.robot.parts.Wheel;
 public class DriveSide {
     
     public Wheel drivewheel;
-    private Motor motor;
     
     public DriveSide(int[] pinIDs) {
         drivewheel = new Wheel(new Motor(pinIDs[0]));

@@ -12,7 +12,10 @@ package edu.frc.wbhs.robot.parts;
  */
 public class Wheel {
     
-    public static final double DIAMETER = 4.0; // Inches
+    /**
+     * Diameter of the robot's wheels in inches.
+     */
+    public static final double DIAMETER = 4.0;
     
     public Motor motor;
     

@@ -16,7 +16,10 @@ public class Chassis {
     
     private DriveSide leftdrive;
     private DriveSide rightdrive;
-    
+    // TO DO:
+    // private Sensor gyro;
+    // private Sensor accelerometer;
+    // private Sensor weirdsensor;
     
     public Chassis(int[] leftdrivePinIDs, int[] rightdrivePinIDs) {
         leftdrive = new DriveSide(leftdrivePinIDs);
