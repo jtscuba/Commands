@@ -6,6 +6,8 @@
 
 package edu.frc.wbhs.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
+
 /**
  *
  * @author Brendan
@@ -13,5 +15,9 @@ package edu.frc.wbhs.robot;
 public class Robot {
     void Robot() {
         //do nothing
+    }
+    public static void drive(Joystick j, int mode) { // 0 = arcade, 1 = tank
+        int xAxis = j.getRawAxis(X_AXIS_CHANNEL);
+        
     }
 }
