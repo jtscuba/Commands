@@ -12,20 +12,28 @@ public class Chassis {
 	// private Gyroscope gyro;
 	// private Accelerometer accelerometer;
 	// private SomeSensor weirdsensor;
-	
 
 	public Chassis(int[] leftdrivePinIDs, int[] rightdrivePinIDs) {
 		leftdrive = new DriveSide(leftdrivePinIDs);
 		rightdrive = new DriveSide(rightdrivePinIDs);
 	}
 
-	public boolean drive(double leftSidePower, double rightSidePower) {
-		boolean failed = false;
-
+	public void drive(double xAxis, double yAxis, int mode) {
+		double leftSidePower = 0;
+		double rightSidePower = 0;
+		double requestedLinearSpeed = 0; 
+		double requestedAngularSpeed = 0;
+		if (mode == 0) { // arcade mode is selected
+			requestedLinearSpeed = xAxis;
+			requestedAngularSpeed = yAxis;
+			rightSidePower = (requestedLinearSpeed + requestedAngularSpeed); //this might turn the wrong way
+			leftSidePower = (requestedLinearSpeed - requestedAngularSpeed);
+			/*put the gyroscope code here, add the pid to the power for one side, 
+			 subtract it from the pother in order to approach the correct angular speed*/
+		}
 		leftdrive.setSpeed(leftSidePower);
 		rightdrive.setSpeed(rightSidePower);
 
-		return failed;
 	}
 
 }

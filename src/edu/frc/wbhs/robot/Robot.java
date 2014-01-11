@@ -21,25 +21,10 @@ public class Robot {
 
 	public void drive(Joystick j, int mode) { // mode: 0 = arcade, 1 = tank
 
-		/* TODO: put this code into the chassis drive method, there's too many
-		 continuous lines of code for this high up the object tree */
-		
 		// pull axes from the joystick	
 		double xAxis = j.getRawAxis(RobotTemplate.X_AXIS_CHANNEL);
 		double yAxis = j.getRawAxis(RobotTemplate.Y_AXIS_CHANNEL);
 		double zAxis = j.getRawAxis(RobotTemplate.Z_AXIS_CHANNEL);
-
-		if (mode == 0) { // arcade mode is selected
-			double requestedLinearSpeed = xAxis;
-			double requestedAngularSpeed = yAxis;
-			double rightSidePower = (requestedLinearSpeed + requestedAngularSpeed); //this might turn the wrong way
-			double leftSidePower = (requestedLinearSpeed - requestedAngularSpeed);
-			/*put the gyroscope code here, add the pid to the power for one side, 
-			 subtract it from the pother in order to approach the correct angular speed*/
-
-			c.drive(leftSidePower, rightSidePower);
-
-		}
-
+		c.drive(xAxis, yAxis, mode);
 	}
 }
